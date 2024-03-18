@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Type=Смотрят, State=Default.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

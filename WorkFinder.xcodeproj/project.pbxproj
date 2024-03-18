@@ -14,6 +14,36 @@
 		852A48A32BA8B86D000EF11C /* WorkFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48A22BA8B86D000EF11C /* WorkFinderTests.swift */; };
 		852A48AD2BA8B86D000EF11C /* WorkFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48AC2BA8B86D000EF11C /* WorkFinderUITests.swift */; };
 		852A48AF2BA8B86D000EF11C /* WorkFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48AE2BA8B86D000EF11C /* WorkFinderUITestsLaunchTests.swift */; };
+		852A48BD2BA8B8DF000EF11C /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48BC2BA8B8DF000EF11C /* TabBarCoordinator.swift */; };
+		852A48C02BA8B94D000EF11C /* CodeFieldPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48BF2BA8B94D000EF11C /* CodeFieldPasswordView.swift */; };
+		852A48C22BA8B972000EF11C /* CodeInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48C12BA8B972000EF11C /* CodeInputField.swift */; };
+		852A48C42BA8B982000EF11C /* CustomTextWithLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48C32BA8B982000EF11C /* CustomTextWithLayerView.swift */; };
+		852A48C62BA8B98F000EF11C /* ImageWithTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48C52BA8B98F000EF11C /* ImageWithTextView.swift */; };
+		852A48C82BA8B9A7000EF11C /* SegmentedPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48C72BA8B9A7000EF11C /* SegmentedPickerButton.swift */; };
+		852A48CA2BA8B9C9000EF11C /* WideFatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48C92BA8B9C9000EF11C /* WideFatButton.swift */; };
+		852A48CC2BA8B9D6000EF11C /* WideThinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48CB2BA8B9D6000EF11C /* WideThinButton.swift */; };
+		852A48CF2BA8B9F0000EF11C /* FavoritesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48CE2BA8B9F0000EF11C /* FavoritesScreenView.swift */; };
+		852A48D12BA8B9FE000EF11C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48D02BA8B9FE000EF11C /* FavoritesViewModel.swift */; };
+		852A48D42BA8BA1C000EF11C /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48D32BA8BA1C000EF11C /* ButtonState.swift */; };
+		852A48D82BA8BA3A000EF11C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48D72BA8BA3A000EF11C /* Color.swift */; };
+		852A48DA2BA8BA4B000EF11C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48D92BA8BA4A000EF11C /* Fonts.swift */; };
+		852A48DC2BA8BA5A000EF11C /* StrokeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48DB2BA8BA5A000EF11C /* StrokeModifier.swift */; };
+		852A48DE2BA8BA6A000EF11C /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48DD2BA8BA6A000EF11C /* ViewModifier.swift */; };
+		852A48E12BA8BA85000EF11C /* InfoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E02BA8BA85000EF11C /* InfoProperties.swift */; };
+		852A48E32BA8BA96000EF11C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E22BA8BA96000EF11C /* InfoView.swift */; };
+		852A48E62BA8BACA000EF11C /* CodeFieldScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */; };
+		852A48E82BA8BAD7000EF11C /* EmployeeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */; };
+		852A48EA2BA8BAE5000EF11C /* JobSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E92BA8BAE5000EF11C /* JobSearchView.swift */; };
+		852A48EC2BA8BAF7000EF11C /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */; };
+		852A48EE2BA8BB07000EF11C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */; };
+		852A48F12BA8BB37000EF11C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48F02BA8BB37000EF11C /* TabBarView.swift */; };
+		852A48F32BA8BB45000EF11C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48F22BA8BB45000EF11C /* UserModel.swift */; };
+		852A48F72BA8BB8E000EF11C /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 852A48F42BA8BB8D000EF11C /* SFProDisplay-Medium.ttf */; };
+		852A48F82BA8BB8E000EF11C /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 852A48F52BA8BB8D000EF11C /* SFProDisplay-Semibold.ttf */; };
+		852A48F92BA8BB8E000EF11C /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 852A48F62BA8BB8E000EF11C /* SFProDisplay-Regular.ttf */; };
+		852A48FD2BA8BD4A000EF11C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 852A48FC2BA8BD4A000EF11C /* Alamofire */; };
+		852A48FF2BA8BD4A000EF11C /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 852A48FE2BA8BD4A000EF11C /* AlamofireDynamic */; };
+		852A49022BA8BD7B000EF11C /* StabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A49012BA8BD7B000EF11C /* StabViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +74,35 @@
 		852A48A82BA8B86D000EF11C /* WorkFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		852A48AC2BA8B86D000EF11C /* WorkFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFinderUITests.swift; sourceTree = "<group>"; };
 		852A48AE2BA8B86D000EF11C /* WorkFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		852A48BC2BA8B8DF000EF11C /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		852A48BF2BA8B94D000EF11C /* CodeFieldPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFieldPasswordView.swift; sourceTree = "<group>"; };
+		852A48C12BA8B972000EF11C /* CodeInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputField.swift; sourceTree = "<group>"; };
+		852A48C32BA8B982000EF11C /* CustomTextWithLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextWithLayerView.swift; sourceTree = "<group>"; };
+		852A48C52BA8B98F000EF11C /* ImageWithTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithTextView.swift; sourceTree = "<group>"; };
+		852A48C72BA8B9A7000EF11C /* SegmentedPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerButton.swift; sourceTree = "<group>"; };
+		852A48C92BA8B9C9000EF11C /* WideFatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideFatButton.swift; sourceTree = "<group>"; };
+		852A48CB2BA8B9D6000EF11C /* WideThinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideThinButton.swift; sourceTree = "<group>"; };
+		852A48CE2BA8B9F0000EF11C /* FavoritesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenView.swift; sourceTree = "<group>"; };
+		852A48D02BA8B9FE000EF11C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		852A48D32BA8BA1C000EF11C /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
+		852A48D72BA8BA3A000EF11C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		852A48D92BA8BA4A000EF11C /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		852A48DB2BA8BA5A000EF11C /* StrokeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeModifier.swift; sourceTree = "<group>"; };
+		852A48DD2BA8BA6A000EF11C /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		852A48E02BA8BA85000EF11C /* InfoProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoProperties.swift; sourceTree = "<group>"; };
+		852A48E22BA8BA96000EF11C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFieldScreenView.swift; sourceTree = "<group>"; };
+		852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSearchView.swift; sourceTree = "<group>"; };
+		852A48E92BA8BAE5000EF11C /* JobSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchView.swift; sourceTree = "<group>"; };
+		852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		852A48F02BA8BB37000EF11C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		852A48F22BA8BB45000EF11C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		852A48F42BA8BB8D000EF11C /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		852A48F52BA8BB8D000EF11C /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		852A48F62BA8BB8E000EF11C /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		852A48FB2BA8BC05000EF11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		852A49012BA8BD7B000EF11C /* StabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852A48FD2BA8BD4A000EF11C /* Alamofire in Frameworks */,
+				852A48FF2BA8BD4A000EF11C /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +155,19 @@
 		852A48902BA8B86B000EF11C /* WorkFinder */ = {
 			isa = PBXGroup;
 			children = (
+				852A48FB2BA8BC05000EF11C /* Info.plist */,
 				852A48912BA8B86B000EF11C /* WorkFinderApp.swift */,
 				852A48932BA8B86B000EF11C /* ContentView.swift */,
+				852A49012BA8BD7B000EF11C /* StabViews.swift */,
+				852A48F22BA8BB45000EF11C /* UserModel.swift */,
+				852A48EF2BA8BB2F000EF11C /* TabBar */,
+				852A48E42BA8BABB000EF11C /* Login */,
+				852A48DF2BA8BA7F000EF11C /* Info */,
+				852A48CD2BA8B9E9000EF11C /* Favorites */,
+				852A48BE2BA8B933000EF11C /* CustomViews */,
+				852A48BB2BA8B8D1000EF11C /* Coordinators */,
 				852A48952BA8B86D000EF11C /* Assets.xcassets */,
+				852A48D22BA8BA0E000EF11C /* Helpers */,
 				852A48972BA8B86D000EF11C /* Preview Content */,
 			);
 			path = WorkFinder;
@@ -127,6 +198,97 @@
 			path = WorkFinderUITests;
 			sourceTree = "<group>";
 		};
+		852A48BB2BA8B8D1000EF11C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				852A48BC2BA8B8DF000EF11C /* TabBarCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		852A48BE2BA8B933000EF11C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				852A48BF2BA8B94D000EF11C /* CodeFieldPasswordView.swift */,
+				852A48C12BA8B972000EF11C /* CodeInputField.swift */,
+				852A48C32BA8B982000EF11C /* CustomTextWithLayerView.swift */,
+				852A48C52BA8B98F000EF11C /* ImageWithTextView.swift */,
+				852A48C72BA8B9A7000EF11C /* SegmentedPickerButton.swift */,
+				852A48C92BA8B9C9000EF11C /* WideFatButton.swift */,
+				852A48CB2BA8B9D6000EF11C /* WideThinButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		852A48CD2BA8B9E9000EF11C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				852A48CE2BA8B9F0000EF11C /* FavoritesScreenView.swift */,
+				852A48D02BA8B9FE000EF11C /* FavoritesViewModel.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		852A48D22BA8BA0E000EF11C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				852A48D32BA8BA1C000EF11C /* ButtonState.swift */,
+				852A48D62BA8BA33000EF11C /* Extensions */,
+				852A48D52BA8BA25000EF11C /* Fonts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		852A48D52BA8BA25000EF11C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				852A48F42BA8BB8D000EF11C /* SFProDisplay-Medium.ttf */,
+				852A48F62BA8BB8E000EF11C /* SFProDisplay-Regular.ttf */,
+				852A48F52BA8BB8D000EF11C /* SFProDisplay-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		852A48D62BA8BA33000EF11C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				852A48D72BA8BA3A000EF11C /* Color.swift */,
+				852A48D92BA8BA4A000EF11C /* Fonts.swift */,
+				852A48DB2BA8BA5A000EF11C /* StrokeModifier.swift */,
+				852A48DD2BA8BA6A000EF11C /* ViewModifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		852A48DF2BA8BA7F000EF11C /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				852A48E02BA8BA85000EF11C /* InfoProperties.swift */,
+				852A48E22BA8BA96000EF11C /* InfoView.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		852A48E42BA8BABB000EF11C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */,
+				852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */,
+				852A48E92BA8BAE5000EF11C /* JobSearchView.swift */,
+				852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */,
+				852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		852A48EF2BA8BB2F000EF11C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				852A48F02BA8BB37000EF11C /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +305,10 @@
 			dependencies = (
 			);
 			name = WorkFinder;
+			packageProductDependencies = (
+				852A48FC2BA8BD4A000EF11C /* Alamofire */,
+				852A48FE2BA8BD4A000EF11C /* AlamofireDynamic */,
+			);
 			productName = WorkFinder;
 			productReference = 852A488E2BA8B86B000EF11C /* WorkFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +381,9 @@
 				Base,
 			);
 			mainGroup = 852A48852BA8B86A000EF11C;
+			packageReferences = (
+				852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 852A488F2BA8B86B000EF11C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +401,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				852A48992BA8B86D000EF11C /* Preview Assets.xcassets in Resources */,
+				852A48F82BA8BB8E000EF11C /* SFProDisplay-Semibold.ttf in Resources */,
 				852A48962BA8B86D000EF11C /* Assets.xcassets in Resources */,
+				852A48F92BA8BB8E000EF11C /* SFProDisplay-Regular.ttf in Resources */,
+				852A48F72BA8BB8E000EF11C /* SFProDisplay-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +430,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				852A48942BA8B86B000EF11C /* ContentView.swift in Sources */,
+				852A48DA2BA8BA4B000EF11C /* Fonts.swift in Sources */,
+				852A48EA2BA8BAE5000EF11C /* JobSearchView.swift in Sources */,
 				852A48922BA8B86B000EF11C /* WorkFinderApp.swift in Sources */,
+				852A48CF2BA8B9F0000EF11C /* FavoritesScreenView.swift in Sources */,
+				852A48D42BA8BA1C000EF11C /* ButtonState.swift in Sources */,
+				852A48CA2BA8B9C9000EF11C /* WideFatButton.swift in Sources */,
+				852A48E32BA8BA96000EF11C /* InfoView.swift in Sources */,
+				852A48DC2BA8BA5A000EF11C /* StrokeModifier.swift in Sources */,
+				852A48C22BA8B972000EF11C /* CodeInputField.swift in Sources */,
+				852A48BD2BA8B8DF000EF11C /* TabBarCoordinator.swift in Sources */,
+				852A48D12BA8B9FE000EF11C /* FavoritesViewModel.swift in Sources */,
+				852A48C82BA8B9A7000EF11C /* SegmentedPickerButton.swift in Sources */,
+				852A48D82BA8BA3A000EF11C /* Color.swift in Sources */,
+				852A48DE2BA8BA6A000EF11C /* ViewModifier.swift in Sources */,
+				852A48E82BA8BAD7000EF11C /* EmployeeSearchView.swift in Sources */,
+				852A48E62BA8BACA000EF11C /* CodeFieldScreenView.swift in Sources */,
+				852A48C62BA8B98F000EF11C /* ImageWithTextView.swift in Sources */,
+				852A48F32BA8BB45000EF11C /* UserModel.swift in Sources */,
+				852A48F12BA8BB37000EF11C /* TabBarView.swift in Sources */,
+				852A48CC2BA8B9D6000EF11C /* WideThinButton.swift in Sources */,
+				852A48C42BA8B982000EF11C /* CustomTextWithLayerView.swift in Sources */,
+				852A49022BA8BD7B000EF11C /* StabViews.swift in Sources */,
+				852A48EE2BA8BB07000EF11C /* LoginViewModel.swift in Sources */,
+				852A48E12BA8BA85000EF11C /* InfoProperties.swift in Sources */,
+				852A48C02BA8B94D000EF11C /* CodeFieldPasswordView.swift in Sources */,
+				852A48EC2BA8BAF7000EF11C /* LoginScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +622,7 @@
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +652,7 @@
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +787,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		852A48FC2BA8BD4A000EF11C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		852A48FE2BA8BD4A000EF11C /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 852A48862BA8B86A000EF11C /* Project object */;
 }

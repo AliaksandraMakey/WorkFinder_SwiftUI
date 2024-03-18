@@ -1,24 +1,38 @@
 //
 //  ContentView.swift
-//  WorkFinder
+//  WorkFinder_SwiftUI
 //
-//  Created by Александра Макей on 18.03.2024.
+//  Created by Александра Макей on 15.03.2024.
 //
 
+import Alamofire
 import SwiftUI
 
 struct ContentView: View {
+    @State private var hasInternetConnection = true
+    @State var mistake = InfoProperties.noNetwork
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if hasInternetConnection {
+                TabBarView()
+            } else {
+                InfoView(warmingText: mistake.warmingText, image: mistake.image, buttonText: mistake.buttonText)
+            }
         }
-        .padding()
+        .onAppear(perform: checkInternetConnection)
+    }
+    
+    private func checkInternetConnection() {
+        NetworkReachabilityManager.default?.startListening { status in
+            DispatchQueue.main.async {
+                hasInternetConnection = status == .reachable(.ethernetOrWiFi) || status == .reachable(.cellular)
+            }
+        }
     }
 }
 
 #Preview {
     ContentView()
 }
+
+

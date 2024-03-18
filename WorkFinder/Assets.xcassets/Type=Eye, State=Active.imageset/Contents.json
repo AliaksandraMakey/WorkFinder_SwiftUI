@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Type=Eye, State=Active.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
