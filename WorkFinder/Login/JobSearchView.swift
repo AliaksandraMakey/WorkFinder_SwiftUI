@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#warning ("TODO: добавить локализацию. Если не соответствует, то поле ввода выделяется красным цветом и красным текстом под ним отображается текст “Вы ввели неверный e-mail”.")
 struct JobSearchView: View {
     @ObservedObject var viewModel: LoginViewModel
     @Binding var isImageVisible: Bool
@@ -23,7 +24,7 @@ struct JobSearchView: View {
             TextField("", text: $viewModel.email)
                 .foregroundColor(.white.opacity(0.4))
                 .frame(height: 40)
-                .background(Color.Basic.grey2)
+                .background(Color.Basic.gray2)
                 .cornerRadius(8)
                 .multilineTextAlignment(.center)
                 .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 2)

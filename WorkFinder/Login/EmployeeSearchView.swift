@@ -17,7 +17,7 @@ struct EmployeeSearchView: View {
                     .font(.regular(size: 14))
                     .foregroundColor(.white)
             Spacer().frame(height: 16)
-            WideThinButton(skipButtonText: "Я ищу сотрудников") {
+            WideThinButton(name: "Я ищу сотрудников") {
                 print("tap: Я ищу сотрудников")
             }
             Spacer().frame(height: 24)

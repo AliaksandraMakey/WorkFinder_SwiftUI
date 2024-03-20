@@ -16,7 +16,9 @@ struct ContentView: View {
             if hasInternetConnection {
                 TabBarView()
             } else {
-                InfoView(warmingText: mistake.warmingText, image: mistake.image, buttonText: mistake.buttonText)
+                InfoView(warmingText: mistake.warmingText, 
+                         image: mistake.image,
+                         buttonName: mistake.buttonName)
             }
         }
         .onAppear(perform: checkInternetConnection)

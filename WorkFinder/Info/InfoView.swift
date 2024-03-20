@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct InfoView: View {
-    //текстовые значения
-    @State var warmingText: String
-    //картинка
+    /// text
+    var warmingText: String
+    /// image
     @State var image: String
-    //кнопка
-    @State var buttonText: String
-    
+    /// button name
+    @State var buttonName: String
+    /// flag
+    @State private var isContentViewPresented = false
+    //MARK: - body
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -25,14 +27,18 @@ struct InfoView: View {
                     image: image
                 ).frame(width: geometry.size.width * 0.9)
                 
-                WideThinButton(skipButtonText: buttonText) {
-                    
-                }.frame(width: geometry.size.width * 0.9)
+                WideThinButton(name: buttonName) {
+                    self.isContentViewPresented = true
+                }
+                .padding(.horizontal, 16)
                 
-                Spacer()
+                Spacer().frame(width: geometry.size.width * 0.9)
             }
-            .frame(maxHeight: geometry.size.height)
-            .padding(.all, 16)
+        }
+        .edgesIgnoringSafeArea(.all)
+        .background(Color.Basic.black)
+        .fullScreenCover(isPresented: $isContentViewPresented) {
+            ContentView()
         }
     }
 }
@@ -41,7 +47,7 @@ struct InfoView: View {
     InfoView(
         warmingText: "Описание",
         image: "bad_connection",
-        buttonText: "Кнопка"
+        buttonName: "Кнопка"
     )
 }
 

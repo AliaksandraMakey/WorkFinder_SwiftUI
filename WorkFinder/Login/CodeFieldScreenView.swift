@@ -27,7 +27,7 @@ struct CodeFieldScreenView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Отправили код на \(viewModel.email)")
                         .foregroundColor(.white)
-                        .font(.sembold(size: 20))
+                        .font(.semibold(size: 20))
                     
                     Text("Напишите его, чтобы подтвердить, что это \nвы, а не кто-то другой входит в личный  \nкабинет")
                         .foregroundColor(.white)
@@ -35,7 +35,7 @@ struct CodeFieldScreenView: View {
                 }
                     CodeFieldPasswordView(digits: $digits, isCodeValid: $viewModel.isEmailValid)
                     
-                    WideBlueButton(buttonText: "Подтвердить", buttonState: $buttonState) {
+                    WideBlueButton(name: "Подтвердить", buttonState: $buttonState) {
                         handleWideBlueButtonTap()
                     }
                     .onChange(of: digits) { newValue in
@@ -66,14 +66,17 @@ struct CodeFieldScreenView: View {
         let enteredCode = digits.joined()
         if enteredCode.count == 4 {
             viewModel.password = enteredCode
-            viewModel.checkPassword { success, error in
+            viewModel
+                .checkPassword { success, error in
                 switch (success, error) {
                 case (true, nil):
-                    viewModel.createUser { user, error in
+                    viewModel
+                        .createUser { user, error in
                         if let user = user {
                         self.currentUser.email = user.email
                         self.currentUser.password = user.password
-                            shouldShowTabBarView = true
+                            
+                        shouldShowTabBarView = true
                         } else if let error = error {
                             print("Error creating user: \(error.localizedDescription)")
                             showTriedLimitWarningAlert = true

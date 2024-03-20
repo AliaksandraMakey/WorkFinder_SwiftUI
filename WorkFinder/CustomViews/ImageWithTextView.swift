@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct ImageWithTextView: View {
-    //текстовые значения
+public struct ImageWithTextView: View {
+    /// text
     @State var text: String
-    //картинка
+    /// image
     @State var image: String
-    
-    var body: some View {
-        
+    //MARK: - body
+    public var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 Image(image)
@@ -25,22 +24,16 @@ struct ImageWithTextView: View {
                     .clipped()
                     .padding(.horizontal, 16)
                 
-                Spacer(minLength: 30)
-                
                 HStack {
                     Text(text)
-                        .padding(.top, 0.012 * geometry.size.height)
                         .foregroundColor(Color.Basic.white)
-                        .font(.medium(size: 16))
-                        .fixedSize(horizontal: false, vertical: true)
+                        .font(.semibold(size: 20))
+                        .padding(.leading, 16)
                     Spacer()
                 }
                 Spacer()
             }
-            
         }
-        
-        .background(Color.Shadow.shadows)
         .ignoresSafeArea()
     }
 }

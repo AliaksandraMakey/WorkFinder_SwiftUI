@@ -7,7 +7,7 @@
 
 
 import SwiftUI
-#warning ("TODO: добавить локализацию")
+#warning ("TODO: добавить локализацию.")
 struct LoginScreenView: View {
     @ObservedObject var viewModel: LoginViewModel
     @State private var isImageVisible = true
@@ -73,8 +73,8 @@ struct LoginScreenView: View {
     }
 }
 
-
-#Preview {
-    LoginScreenView(viewModel: LoginViewModel())
-}
-
+//
+//#Preview {
+//    LoginScreenView(viewModel: LoginViewModel())
+//}
+//
