@@ -7,27 +7,28 @@
 
 
 import SwiftUI
-#warning ("TODO: добавить локализацию.")
+
 struct LoginScreenView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel: LoginViewModel
     @State private var isImageVisible = true
     @State private var selectedOption = 0
+    /// states
     @State private var isCodeScreenPresented = false
     @State private var showAlert = false
-    
+    //MARK: -  init
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
     }
-    
+    //MARK: - body
     var body: some View {
         VStack(alignment: .leading) {
-            
             CustomTextWithLayerView(textLabel: "Вход в личный кабинет",
                                     width: 0.5, fontSize: 22)
             .padding(.top, 64)
             .padding(.bottom, 110)
             
-            JobSearchView(viewModel: viewModel, isImageVisible: $isImageVisible, selectedOption: $selectedOption, onLoginSuccess: {
+            JobSearchLoginView(viewModel: viewModel, isImageVisible: $isImageVisible, selectedOption: $selectedOption, onLoginSuccess: {
                 viewModel.checkEmail { success, error in
                     switch success {
                     case true:
@@ -55,26 +56,19 @@ struct LoginScreenView: View {
             
             Spacer()
         }
+        // presenters
         .fullScreenCover(isPresented: $isCodeScreenPresented) {
             CodeFieldScreenView(viewModel: viewModel)
-   
         }
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Ошибка"),
-                message: Text("Неверный email"),
-                dismissButton: .default(Text("OK"))
+                message: Text("Пользователь с таким email не найден"),
+                dismissButton: .default(Text("Ввести еще раз"))
             )
         }
-    
         .padding(.horizontal, 16)
         .edgesIgnoringSafeArea(.all)
         .background(Color.Basic.black)
     }
 }
-
-//
-//#Preview {
-//    LoginScreenView(viewModel: LoginViewModel())
-//}
-//

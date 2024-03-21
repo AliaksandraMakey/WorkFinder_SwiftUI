@@ -10,13 +10,20 @@ import SwiftUI
 public struct WideThinButton: View {
     /// text
     var name: String
+    /// color
+    var color: Color
+    /// radius
+    var radius: CGFloat
     /// button action
     var onPress: () -> Void
     //MARK: -  init
-    init(name: String, onPress: @escaping () -> Void) {
+    init(name: String, color: Color = Color.Special.green, radius: CGFloat = 50, onPress: @escaping () -> Void) {
         self.name = name
+        self.color = color
+        self.radius = radius
         self.onPress = onPress
     }
+
     //MARK: -  body
     public var body: some View {
         Button(action: onPress) {
@@ -24,9 +31,9 @@ public struct WideThinButton: View {
                 .font(.regular(size: 14))
                 .foregroundColor(Color.Basic.white)
         }
-        .frame(maxWidth: .infinity, maxHeight: 32)
-        .background(Color.Special.green)
-        .cornerRadius(50)
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .background(color)
+        .cornerRadius(radius)
     }
 }
 //#Preview {

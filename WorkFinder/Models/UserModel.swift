@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
+
 
 class UserModel: ObservableObject {
+   static let shared = UserModel(id: "12345", email: "alex@gmail.com", password: "1111")
+    var id: String
     var email: String
     var password: String
     
-     init(email: String, password: String) {
+    init(id: String, email: String, password: String) {
+        self.id = id
         self.email = email
         self.password = password
     }

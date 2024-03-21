@@ -11,8 +11,8 @@ struct TabBarView: View {
     //MARK: - Properties
     @ObservedObject var coordinator = TabBarCoordinator()
     @ObservedObject var viewModel = LoginViewModel()
-    var user: UserModel?
-    
+    var user: UserModel
+    //MARK: - body
     var body: some View {
         ZStack {
             contentView(for: coordinator.currentTab)
@@ -33,20 +33,18 @@ struct TabBarView: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .environmentObject(coordinator)
-}
-
+    }
     //MARK: - Presenters
     func contentView(for tab: TabBarCoordinator.Tab) -> some View {
         switch tab {
         case .search:
             return AnyView(MainScreenView())
         case .favorites:
-            let user = UserModel(email: "alex", password: "1111")
-//            if let user = user {
+            if UserModel.shared.email == user.email {
                 return AnyView(FavoritesScreenView(user: user))
-//            } else {
-//                return AnyView(LoginScreenView(viewModel: viewModel))
-//            }
+            } else {
+                return AnyView(LoginScreenView(viewModel: viewModel))
+            }
         case .responses:
             return AnyView(ResponsesView())
         case .messages:

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850F9B7F2BAB7A77008BBAF6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F9B7E2BAB7A77008BBAF6 /* RealmService.swift */; };
+		850F9B812BAB7AAD008BBAF6 /* VacancyModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850F9B802BAB7AAD008BBAF6 /* VacancyModelRealm.swift */; };
 		852A48922BA8B86B000EF11C /* WorkFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48912BA8B86B000EF11C /* WorkFinderApp.swift */; };
 		852A48942BA8B86B000EF11C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48932BA8B86B000EF11C /* ContentView.swift */; };
 		852A48962BA8B86D000EF11C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852A48952BA8B86D000EF11C /* Assets.xcassets */; };
@@ -33,7 +35,7 @@
 		852A48E32BA8BA96000EF11C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E22BA8BA96000EF11C /* InfoView.swift */; };
 		852A48E62BA8BACA000EF11C /* CodeFieldScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */; };
 		852A48E82BA8BAD7000EF11C /* EmployeeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */; };
-		852A48EA2BA8BAE5000EF11C /* JobSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E92BA8BAE5000EF11C /* JobSearchView.swift */; };
+		852A48EA2BA8BAE5000EF11C /* JobSearchLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48E92BA8BAE5000EF11C /* JobSearchLoginView.swift */; };
 		852A48EC2BA8BAF7000EF11C /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */; };
 		852A48EE2BA8BB07000EF11C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */; };
 		852A48F12BA8BB37000EF11C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A48F02BA8BB37000EF11C /* TabBarView.swift */; };
@@ -57,8 +59,15 @@
 		85A01C522BAA283C0028C04D /* Regular14TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A01C512BAA283C0028C04D /* Regular14TextField.swift */; };
 		85A01C552BAABCBA0028C04D /* DescriptionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A01C542BAABCBA0028C04D /* DescriptionScreenView.swift */; };
 		85A01C572BAABCC70028C04D /* DescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A01C562BAABCC70028C04D /* DescriptionViewModel.swift */; };
-		85A01C592BAAFD270028C04D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A01C582BAAFD270028C04D /* StringExtensions.swift */; };
 		85A01C5B2BAB04F70028C04D /* CustomImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A01C5A2BAB04F70028C04D /* CustomImageButton.swift */; };
+		85C1DCBE2BABA4A90085551D /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCBD2BABA4A90085551D /* RoundedTextView.swift */; };
+		85C1DCC02BABA4C90085551D /* SecondElementDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCBF2BABA4C90085551D /* SecondElementDescriptionView.swift */; };
+		85C1DCC22BABA7750085551D /* FirstElementDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCC12BABA7750085551D /* FirstElementDescriptionView.swift */; };
+		85C1DCC42BABA86B0085551D /* MapViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCC32BABA86B0085551D /* MapViews.swift */; };
+		85C1DCC72BAC294F0085551D /* ExperienceModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCC62BAC294F0085551D /* ExperienceModelRealm.swift */; };
+		85C1DCC92BAC29760085551D /* AddressModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCC82BAC29760085551D /* AddressModelRealm.swift */; };
+		85C1DCCB2BAC29940085551D /* SalaryModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCCA2BAC29940085551D /* SalaryModelRealm.swift */; };
+		85C1DCCD2BAC41B80085551D /* LongDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1DCCC2BAC41B80085551D /* LongDescriptionViewModel.swift */; };
 		85E006922BAB252900BF25C2 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006912BAB252900BF25C2 /* RequestModel.swift */; };
 		85E006942BAB25F400BF25C2 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006932BAB25F400BF25C2 /* OfferModel.swift */; };
 		85E006962BAB260500BF25C2 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006952BAB260500BF25C2 /* ButtonModel.swift */; };
@@ -66,6 +75,14 @@
 		85E0069A2BAB264D00BF25C2 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006992BAB264D00BF25C2 /* AddressModel.swift */; };
 		85E0069C2BAB266900BF25C2 /* ExperienceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0069B2BAB266900BF25C2 /* ExperienceModel.swift */; };
 		85E0069E2BAB26F600BF25C2 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0069D2BAB26F600BF25C2 /* SalaryModel.swift */; };
+		85E006A02BAB325500BF25C2 /* GreenStackTextWithImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0069F2BAB325500BF25C2 /* GreenStackTextWithImageView.swift */; };
+		85E006A32BAB38AE00BF25C2 /* DescriptionNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006A22BAB38AE00BF25C2 /* DescriptionNavigationBarView.swift */; };
+		85E006A52BAB3EF600BF25C2 /* ShortMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006A42BAB3EF600BF25C2 /* ShortMapView.swift */; };
+		85E006A82BAB539A00BF25C2 /* ChortDescriptionCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006A72BAB539A00BF25C2 /* ChortDescriptionCardModel.swift */; };
+		85E006AA2BAB550700BF25C2 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006A92BAB550700BF25C2 /* NumberFormatter.swift */; };
+		85E006AD2BAB605900BF25C2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 85E006AC2BAB605900BF25C2 /* Realm */; };
+		85E006AF2BAB605900BF25C2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85E006AE2BAB605900BF25C2 /* RealmSwift */; };
+		85E006B12BAB64B300BF25C2 /* LongDescriptionVacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E006B02BAB64B300BF25C2 /* LongDescriptionVacancyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850F9B7E2BAB7A77008BBAF6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		850F9B802BAB7AAD008BBAF6 /* VacancyModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModelRealm.swift; sourceTree = "<group>"; };
 		852A488E2BA8B86B000EF11C /* WorkFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852A48912BA8B86B000EF11C /* WorkFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkFinderApp.swift; sourceTree = "<group>"; };
 		852A48932BA8B86B000EF11C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,7 +134,7 @@
 		852A48E22BA8BA96000EF11C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFieldScreenView.swift; sourceTree = "<group>"; };
 		852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSearchView.swift; sourceTree = "<group>"; };
-		852A48E92BA8BAE5000EF11C /* JobSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchView.swift; sourceTree = "<group>"; };
+		852A48E92BA8BAE5000EF11C /* JobSearchLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchLoginView.swift; sourceTree = "<group>"; };
 		852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		852A48F02BA8BB37000EF11C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -138,8 +157,15 @@
 		85A01C512BAA283C0028C04D /* Regular14TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regular14TextField.swift; sourceTree = "<group>"; };
 		85A01C542BAABCBA0028C04D /* DescriptionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreenView.swift; sourceTree = "<group>"; };
 		85A01C562BAABCC70028C04D /* DescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewModel.swift; sourceTree = "<group>"; };
-		85A01C582BAAFD270028C04D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		85A01C5A2BAB04F70028C04D /* CustomImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageButton.swift; sourceTree = "<group>"; };
+		85C1DCBD2BABA4A90085551D /* RoundedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextView.swift; sourceTree = "<group>"; };
+		85C1DCBF2BABA4C90085551D /* SecondElementDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondElementDescriptionView.swift; sourceTree = "<group>"; };
+		85C1DCC12BABA7750085551D /* FirstElementDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstElementDescriptionView.swift; sourceTree = "<group>"; };
+		85C1DCC32BABA86B0085551D /* MapViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViews.swift; sourceTree = "<group>"; };
+		85C1DCC62BAC294F0085551D /* ExperienceModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceModelRealm.swift; sourceTree = "<group>"; };
+		85C1DCC82BAC29760085551D /* AddressModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModelRealm.swift; sourceTree = "<group>"; };
+		85C1DCCA2BAC29940085551D /* SalaryModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModelRealm.swift; sourceTree = "<group>"; };
+		85C1DCCC2BAC41B80085551D /* LongDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongDescriptionViewModel.swift; sourceTree = "<group>"; };
 		85E006912BAB252900BF25C2 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		85E006932BAB25F400BF25C2 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		85E006952BAB260500BF25C2 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
@@ -147,6 +173,12 @@
 		85E006992BAB264D00BF25C2 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		85E0069B2BAB266900BF25C2 /* ExperienceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceModel.swift; sourceTree = "<group>"; };
 		85E0069D2BAB26F600BF25C2 /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
+		85E0069F2BAB325500BF25C2 /* GreenStackTextWithImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenStackTextWithImageView.swift; sourceTree = "<group>"; };
+		85E006A22BAB38AE00BF25C2 /* DescriptionNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionNavigationBarView.swift; sourceTree = "<group>"; };
+		85E006A42BAB3EF600BF25C2 /* ShortMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortMapView.swift; sourceTree = "<group>"; };
+		85E006A72BAB539A00BF25C2 /* ChortDescriptionCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChortDescriptionCardModel.swift; sourceTree = "<group>"; };
+		85E006A92BAB550700BF25C2 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		85E006B02BAB64B300BF25C2 /* LongDescriptionVacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongDescriptionVacancyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +186,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E006AF2BAB605900BF25C2 /* RealmSwift in Frameworks */,
+				85E006AD2BAB605900BF25C2 /* Realm in Frameworks */,
 				852A48FD2BA8BD4A000EF11C /* Alamofire in Frameworks */,
 				852A48FF2BA8BD4A000EF11C /* AlamofireDynamic in Frameworks */,
 			);
@@ -210,6 +244,7 @@
 				85A01C3F2BA97AB90028C04D /* Main */,
 				852A48CD2BA8B9E9000EF11C /* Favorites */,
 				852A48DF2BA8BA7F000EF11C /* Info */,
+				85E006A62BAB539100BF25C2 /* ChortDescriptionCard */,
 				852A48BE2BA8B933000EF11C /* CustomViews */,
 				852A48BB2BA8B8D1000EF11C /* Coordinators */,
 				852A48952BA8B86D000EF11C /* Assets.xcassets */,
@@ -255,13 +290,13 @@
 		852A48BE2BA8B933000EF11C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				85E006A12BAB387500BF25C2 /* CustomHeaders */,
 				85E0068F2BAB089400BF25C2 /* Text */,
 				85E0068E2BAB087900BF25C2 /* Fields */,
 				85E0068D2BAB07D200BF25C2 /* Buttons */,
-				85A01C492BA9A8B60028C04D /* ChortDescriptionCardView.swift */,
-				85A01C3D2BA97A560028C04D /* CustomSearchBar.swift */,
+				85E006A42BAB3EF600BF25C2 /* ShortMapView.swift */,
+				85E0069F2BAB325500BF25C2 /* GreenStackTextWithImageView.swift */,
 				852A48C52BA8B98F000EF11C /* ImageWithTextView.swift */,
-				85A01C472BA9A0B30028C04D /* CustomHeaderView.swift */,
 				85A01C4B2BA9C50F0028C04D /* StoriesCardView.swift */,
 			);
 			path = CustomViews;
@@ -280,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				852A48D32BA8BA1C000EF11C /* ButtonState.swift */,
+				85E006A92BAB550700BF25C2 /* NumberFormatter.swift */,
 				852A48D62BA8BA33000EF11C /* Extensions */,
 				852A48D52BA8BA25000EF11C /* Fonts */,
 			);
@@ -300,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				852A48D72BA8BA3A000EF11C /* Color.swift */,
-				85A01C582BAAFD270028C04D /* StringExtensions.swift */,
 				852A48D92BA8BA4A000EF11C /* Fonts.swift */,
 				852A48DB2BA8BA5A000EF11C /* StrokeModifier.swift */,
 				852A48DD2BA8BA6A000EF11C /* ViewModifier.swift */,
@@ -322,7 +357,7 @@
 			children = (
 				852A48E52BA8BACA000EF11C /* CodeFieldScreenView.swift */,
 				852A48E72BA8BAD7000EF11C /* EmployeeSearchView.swift */,
-				852A48E92BA8BAE5000EF11C /* JobSearchView.swift */,
+				852A48E92BA8BAE5000EF11C /* JobSearchLoginView.swift */,
 				852A48EB2BA8BAF7000EF11C /* LoginScreenView.swift */,
 				852A48ED2BA8BB07000EF11C /* LoginViewModel.swift */,
 			);
@@ -343,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				85A01C3B2BA8D7320028C04D /* VacancyService.swift */,
+				850F9B7E2BAB7A77008BBAF6 /* RealmService.swift */,
 			);
 			path = Servises;
 			sourceTree = "<group>";
@@ -361,10 +397,26 @@
 		85A01C532BAABC860028C04D /* Description */ = {
 			isa = PBXGroup;
 			children = (
+				85C1DCCC2BAC41B80085551D /* LongDescriptionViewModel.swift */,
 				85A01C542BAABCBA0028C04D /* DescriptionScreenView.swift */,
 				85A01C562BAABCC70028C04D /* DescriptionViewModel.swift */,
+				85E006B02BAB64B300BF25C2 /* LongDescriptionVacancyView.swift */,
+				85C1DCBF2BABA4C90085551D /* SecondElementDescriptionView.swift */,
+				85C1DCC12BABA7750085551D /* FirstElementDescriptionView.swift */,
+				85C1DCC32BABA86B0085551D /* MapViews.swift */,
 			);
 			path = Description;
+			sourceTree = "<group>";
+		};
+		85C1DCC52BAC293D0085551D /* DataBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				850F9B802BAB7AAD008BBAF6 /* VacancyModelRealm.swift */,
+				85C1DCC62BAC294F0085551D /* ExperienceModelRealm.swift */,
+				85C1DCCA2BAC29940085551D /* SalaryModelRealm.swift */,
+				85C1DCC82BAC29760085551D /* AddressModelRealm.swift */,
+			);
+			path = DataBaseModel;
 			sourceTree = "<group>";
 		};
 		85E0068D2BAB07D200BF25C2 /* Buttons */ = {
@@ -392,6 +444,7 @@
 			children = (
 				852A48C32BA8B982000EF11C /* CustomTextWithLayerView.swift */,
 				85A01C512BAA283C0028C04D /* Regular14TextField.swift */,
+				85C1DCBD2BABA4A90085551D /* RoundedTextView.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -399,16 +452,36 @@
 		85E006902BAB148A00BF25C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				85C1DCC52BAC293D0085551D /* DataBaseModel */,
 				852A48F22BA8BB45000EF11C /* UserModel.swift */,
 				85E006912BAB252900BF25C2 /* RequestModel.swift */,
+				85E006972BAB261500BF25C2 /* VacancyModel.swift */,
+				85E006932BAB25F400BF25C2 /* OfferModel.swift */,
 				85E0069D2BAB26F600BF25C2 /* SalaryModel.swift */,
 				85E0069B2BAB266900BF25C2 /* ExperienceModel.swift */,
 				85E006992BAB264D00BF25C2 /* AddressModel.swift */,
-				85E006972BAB261500BF25C2 /* VacancyModel.swift */,
 				85E006952BAB260500BF25C2 /* ButtonModel.swift */,
-				85E006932BAB25F400BF25C2 /* OfferModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		85E006A12BAB387500BF25C2 /* CustomHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				85A01C472BA9A0B30028C04D /* CustomHeaderView.swift */,
+				85E006A22BAB38AE00BF25C2 /* DescriptionNavigationBarView.swift */,
+				85A01C3D2BA97A560028C04D /* CustomSearchBar.swift */,
+			);
+			path = CustomHeaders;
+			sourceTree = "<group>";
+		};
+		85E006A62BAB539100BF25C2 /* ChortDescriptionCard */ = {
+			isa = PBXGroup;
+			children = (
+				85A01C492BA9A8B60028C04D /* ChortDescriptionCardView.swift */,
+				85E006A72BAB539A00BF25C2 /* ChortDescriptionCardModel.swift */,
+			);
+			path = ChortDescriptionCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +503,8 @@
 			packageProductDependencies = (
 				852A48FC2BA8BD4A000EF11C /* Alamofire */,
 				852A48FE2BA8BD4A000EF11C /* AlamofireDynamic */,
+				85E006AC2BAB605900BF25C2 /* Realm */,
+				85E006AE2BAB605900BF25C2 /* RealmSwift */,
 			);
 			productName = WorkFinder;
 			productReference = 852A488E2BA8B86B000EF11C /* WorkFinder.app */;
@@ -505,6 +580,7 @@
 			mainGroup = 852A48852BA8B86A000EF11C;
 			packageReferences = (
 				852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				85E006AB2BAB605900BF25C2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 852A488F2BA8B86B000EF11C /* Products */;
 			projectDirPath = "";
@@ -551,45 +627,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E006A02BAB325500BF25C2 /* GreenStackTextWithImageView.swift in Sources */,
 				852A48942BA8B86B000EF11C /* ContentView.swift in Sources */,
+				85E006A52BAB3EF600BF25C2 /* ShortMapView.swift in Sources */,
 				85A01C412BA97AF00028C04D /* MainScreenView.swift in Sources */,
 				85E0069A2BAB264D00BF25C2 /* AddressModel.swift in Sources */,
 				852A48DA2BA8BA4B000EF11C /* Fonts.swift in Sources */,
-				852A48EA2BA8BAE5000EF11C /* JobSearchView.swift in Sources */,
+				852A48EA2BA8BAE5000EF11C /* JobSearchLoginView.swift in Sources */,
 				852A48922BA8B86B000EF11C /* WorkFinderApp.swift in Sources */,
 				852A48CF2BA8B9F0000EF11C /* FavoritesScreenView.swift in Sources */,
+				850F9B812BAB7AAD008BBAF6 /* VacancyModelRealm.swift in Sources */,
 				852A48D42BA8BA1C000EF11C /* ButtonState.swift in Sources */,
-				85A01C592BAAFD270028C04D /* StringExtensions.swift in Sources */,
 				852A48CA2BA8B9C9000EF11C /* WideFatButton.swift in Sources */,
+				85E006A82BAB539A00BF25C2 /* ChortDescriptionCardModel.swift in Sources */,
 				852A48E32BA8BA96000EF11C /* InfoView.swift in Sources */,
 				85A01C4E2BA9CAD00028C04D /* MainStoriesProperties.swift in Sources */,
 				852A48DC2BA8BA5A000EF11C /* StrokeModifier.swift in Sources */,
 				852A48C22BA8B972000EF11C /* CodeInputField.swift in Sources */,
+				85C1DCC42BABA86B0085551D /* MapViews.swift in Sources */,
 				852A48BD2BA8B8DF000EF11C /* TabBarCoordinator.swift in Sources */,
 				85E006942BAB25F400BF25C2 /* OfferModel.swift in Sources */,
 				85E006922BAB252900BF25C2 /* RequestModel.swift in Sources */,
 				85A01C4C2BA9C50F0028C04D /* StoriesCardView.swift in Sources */,
+				85C1DCC92BAC29760085551D /* AddressModelRealm.swift in Sources */,
 				852A48D12BA8B9FE000EF11C /* FavoritesViewModel.swift in Sources */,
 				852A48C82BA8B9A7000EF11C /* SegmentedPickerButton.swift in Sources */,
+				85C1DCCD2BAC41B80085551D /* LongDescriptionViewModel.swift in Sources */,
+				85C1DCC22BABA7750085551D /* FirstElementDescriptionView.swift in Sources */,
 				85A01C3C2BA8D7320028C04D /* VacancyService.swift in Sources */,
 				852A48D82BA8BA3A000EF11C /* Color.swift in Sources */,
 				852A48DE2BA8BA6A000EF11C /* ViewModifier.swift in Sources */,
 				852A48E82BA8BAD7000EF11C /* EmployeeSearchView.swift in Sources */,
 				852A48E62BA8BACA000EF11C /* CodeFieldScreenView.swift in Sources */,
+				85C1DCBE2BABA4A90085551D /* RoundedTextView.swift in Sources */,
 				85E0069C2BAB266900BF25C2 /* ExperienceModel.swift in Sources */,
+				85C1DCC02BABA4C90085551D /* SecondElementDescriptionView.swift in Sources */,
 				85A01C552BAABCBA0028C04D /* DescriptionScreenView.swift in Sources */,
 				85A01C482BA9A0B30028C04D /* CustomHeaderView.swift in Sources */,
 				85A01C4A2BA9A8B60028C04D /* ChortDescriptionCardView.swift in Sources */,
+				85C1DCCB2BAC29940085551D /* SalaryModelRealm.swift in Sources */,
 				85A01C502BA9CAE90028C04D /* MainStoriesHeaderView.swift in Sources */,
 				852A48C62BA8B98F000EF11C /* ImageWithTextView.swift in Sources */,
+				85E006A32BAB38AE00BF25C2 /* DescriptionNavigationBarView.swift in Sources */,
+				850F9B7F2BAB7A77008BBAF6 /* RealmService.swift in Sources */,
 				852A48F32BA8BB45000EF11C /* UserModel.swift in Sources */,
 				85A01C462BA98E310028C04D /* TabBarButton.swift in Sources */,
 				852A48F12BA8BB37000EF11C /* TabBarView.swift in Sources */,
 				85E006962BAB260500BF25C2 /* ButtonModel.swift in Sources */,
 				852A48CC2BA8B9D6000EF11C /* WideThinButton.swift in Sources */,
+				85E006B12BAB64B300BF25C2 /* LongDescriptionVacancyView.swift in Sources */,
 				852A48C42BA8B982000EF11C /* CustomTextWithLayerView.swift in Sources */,
 				852A49022BA8BD7B000EF11C /* StabViews.swift in Sources */,
+				85C1DCC72BAC294F0085551D /* ExperienceModelRealm.swift in Sources */,
 				85A01C522BAA283C0028C04D /* Regular14TextField.swift in Sources */,
+				85E006AA2BAB550700BF25C2 /* NumberFormatter.swift in Sources */,
 				852A48EE2BA8BB07000EF11C /* LoginViewModel.swift in Sources */,
 				85E0069E2BAB26F600BF25C2 /* SalaryModel.swift in Sources */,
 				85A01C3E2BA97A560028C04D /* CustomSearchBar.swift in Sources */,
@@ -941,6 +1032,14 @@
 				minimumVersion = 5.9.0;
 			};
 		};
+		85E006AB2BAB605900BF25C2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -953,6 +1052,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 852A48FA2BA8BBC0000EF11C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		85E006AC2BAB605900BF25C2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85E006AB2BAB605900BF25C2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		85E006AE2BAB605900BF25C2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85E006AB2BAB605900BF25C2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

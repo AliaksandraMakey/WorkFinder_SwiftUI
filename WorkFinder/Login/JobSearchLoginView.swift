@@ -8,14 +8,16 @@
 import SwiftUI
 
 #warning ("TODO: добавить локализацию. Если не соответствует, то поле ввода выделяется красным цветом и красным текстом под ним отображается текст “Вы ввели неверный e-mail”.")
-struct JobSearchView: View {
+struct JobSearchLoginView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel: LoginViewModel
     @Binding var isImageVisible: Bool
     @Binding var selectedOption: Int
     @State private var buttonState: ButtonState = .disabled
     @State private var showRedCircle: Bool = false
-    
+    //MARK: - action
     var onLoginSuccess: (() -> Void)?
+    //MARK: - body
     var body: some View {
         VStack(alignment: .leading) {
             CustomTextWithLayerView(textLabel: ("Поиск работы"),
@@ -28,12 +30,10 @@ struct JobSearchView: View {
                 .cornerRadius(8)
                 .multilineTextAlignment(.center)
                 .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 2)
-
                 .onChange(of: viewModel.email) { newValue in
                     viewModel.email = newValue.lowercased()
                     buttonState = viewModel.email.count > 0 ? .normal : .disabled
                 }
-            
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(showRedCircle && (buttonState == .normal) ? Color.red : Color.clear, lineWidth: 1)
@@ -43,6 +43,7 @@ struct JobSearchView: View {
                         if !viewModel.email.isEmpty {
                             Spacer()
                             Button(action: {
+                                showRedCircle = false
                                 viewModel.clearEmail()
                             }) {
                                 Image("big_close")
@@ -54,19 +55,23 @@ struct JobSearchView: View {
                                     .foregroundColor(.gray)
                                     .opacity(isImageVisible ? 1 : 0)
                                 Text("Электронная почта или телефон")
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.Basic.gray4)
                                     .opacity(isImageVisible ? 1 : 0)
                                     .padding(.leading, 0)
                             }
                         }
                     }
                 )
-            
                 .onTapGesture {
                     isImageVisible = false
                 }
-            
-            Spacer().frame(height: 16)
+            if showRedCircle {
+                Text("Вы ввели неверный e-mail ")
+                    .foregroundColor(.red)
+                    .font(.regular(size: 14))
+            } else {
+                Spacer().frame(height: 16)
+            }
             
             SegmentedPickerButton(selectedIndex: $selectedOption, buttonState: $buttonState, onPress: {
                 if viewModel.doesEmailContainSymbols {
@@ -78,7 +83,6 @@ struct JobSearchView: View {
             })
             .frame(height: 40)
         }
-        
         .padding(.horizontal, 16)
         
     }

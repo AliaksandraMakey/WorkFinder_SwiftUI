@@ -6,63 +6,35 @@
 //
 
 
-import UIKit
 import SwiftUI
 
 struct DescriptionScreenView: View {
     //MARK: - Properties
     @ObservedObject var viewModel: DescriptionViewModel
     @Environment(\.presentationMode) var presentationMode
-    
+    //MARK: - body
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                Spacer().frame(height: geometry.size.height * 0.4)
-                Text("\(viewModel.vacancy.title)")
-                    .font(.semibold(size: 22))
-            }
-            .frame(width: geometry.size.width, height: geometry.size.height)
-            .edgesIgnoringSafeArea(.all)
-            .background(Color.black)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading:
-                                    HStack {
-                Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image("left")
-                        .foregroundColor(.white)
-                }
-                Spacer().frame(width: geometry.size.width * 0.6)
-                
-                CustomImageButton(image: "open_eye", width: 26, height: 26) {
+                        VStack {
+                DescriptionNavigationBarView(action1: {
                     print("tap open eye")
-                }
-                
-                Button(action: {
+                }, action2: {
                     viewModel.shareVacancy()
-                }) {
-                    Image("share")
-                        .resizable()
-                        .frame(width: 26, height: 26)
-                        .foregroundColor(.white)
+                }, action3: {
+                    print("tap heart")
+                })
+                .padding(.horizontal, 6)
+                // scroll view
+                ScrollView {
+                    LongDescriptionVacancyView(viewModel: LongDescriptionViewModel(vacancy: viewModel.vacancy))
                 }
-                
-                CustomImageButton(image: "heart", width: 26, height: 26, isOn: viewModel.vacancy.isFavorite, imageFill: "fill_heart") {
-                }
-                
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
+                .frame(width: geometry.size.width, height: geometry.size.height)
             }
-                .padding(.horizontal)
-            )
+            .background(Color.black)
         }
     }
 }
 
 
-//struct DescriptionScreenView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        var vacancy = Vacancy(id: "123", lookingNumber: 2, title: "Software Engineer", address: Address(town: "San Francisco", street: "Main St", house: "123"), company: "TechCo", experience: Experience(previewText: "3+ years of experience", text: ""), publishedDate: "2024-03-19", isFavorite: true)
-//
-//        DescriptionScreenView(viewModel: DescriptionViewModel(vacancy: vacancy))
-//    }
-//}

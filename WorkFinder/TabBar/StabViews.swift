@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+//MARK: - ResponsesViewModel
 class ResponsesViewModel: ObservableObject {}
 
+//MARK: - ResponsesView
 struct ResponsesView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel = ResponsesViewModel()
+    //MARK: - body
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -25,11 +29,14 @@ struct ResponsesView: View {
     }
 }
 
+//MARK: - MessagesViewModel
 class MessagesViewModel: ObservableObject {}
 
+//MARK: - MessagesView
 struct MessagesView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel = MessagesViewModel()
-    
+    //MARK: - body
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -44,11 +51,14 @@ struct MessagesView: View {
     }
 }
 
+//MARK: - ProfileViewModel
 class ProfileViewModel: ObservableObject {}
 
+//MARK: - ProfileView
 struct ProfileView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel = ProfileViewModel()
-    
+    //MARK: - body
     var body: some View {
         GeometryReader { geometry in
             VStack {

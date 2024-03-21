@@ -6,9 +6,7 @@
 //
 
 import SwiftUI
- /// text
-/// flag
-/// button action
+
 public struct WideBlueButton: View {
     /// text
     var name: String

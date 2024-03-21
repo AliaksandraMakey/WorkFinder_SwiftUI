@@ -15,7 +15,7 @@ struct VacancyModel: Codable, Identifiable, Hashable, Equatable {
     let company: String
     let experience: ExperienceModel
     let publishedDate: String
-    let isFavorite: Bool
+    var isFavorite: Bool
     let salary: SalaryModel
     let schedules: [String]
     let appliedNumber: Int?

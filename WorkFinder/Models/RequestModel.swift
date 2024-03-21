@@ -11,4 +11,3 @@ struct RequestModel: Codable {
     var offers: [OfferModel]
     var vacancies: [VacancyModel]
 }
-

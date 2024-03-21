@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainStoriesHeaderView: View {
+    //MARK: - body
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .bottom, spacing: 8) {
@@ -20,8 +21,6 @@ struct MainStoriesHeaderView: View {
                 }
                 .padding(.horizontal, 0)
             }
-         
-        
             .padding(.bottom)
         }
         .padding(.leading, 16)

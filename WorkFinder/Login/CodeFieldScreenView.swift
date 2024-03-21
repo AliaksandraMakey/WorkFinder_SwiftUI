@@ -7,50 +7,49 @@
 
 import SwiftUI
 
-#warning ("TODO: Вынести все Error и обработать ошибки, добавить текста кастомные, добавить на вводе кода звездочки")
+#warning ("FIXME: добавить на вводе кода звездочки")
 struct CodeFieldScreenView: View {
-    // модель
+    //MARK: - Properties
+    var currentUser = UserModel.shared
     @State var viewModel: LoginViewModel
-    var currentUser = UserModel(email: "", password: "")
     @State private var digits = Array(repeating: "", count: 4)
     @State private var buttonState: ButtonState = .disabled
-    // отслеживания состояния
-    @State private var showTriedLimitWarningAlert = false
+    /// states
+    @State private var showWarningAlert = false
     @State private var shouldShowTabBarView = false
-
-    
+    //MARK: -  body
     var body: some View {
         VStack {
-
+            // scroll view
             ScrollView {
                 Spacer().frame(height: 160)
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Отправили код на \(viewModel.email)")
                         .foregroundColor(.white)
                         .font(.semibold(size: 20))
-                    
                     Text("Напишите его, чтобы подтвердить, что это \nвы, а не кто-то другой входит в личный  \nкабинет")
                         .foregroundColor(.white)
                         .font(.medium(size: 16))
                 }
-                    CodeFieldPasswordView(digits: $digits, isCodeValid: $viewModel.isEmailValid)
-                    
-                    WideBlueButton(name: "Подтвердить", buttonState: $buttonState) {
-                        handleWideBlueButtonTap()
-                    }
-                    .onChange(of: digits) { newValue in
-                        if newValue.allSatisfy({ !$0.isEmpty }) {
-                            buttonState = .normal
-                        } else {
-                            buttonState = .disabled
+                CodeFieldPasswordView(digits: $digits, isCodeValid: $viewModel.isEmailValid)
+                
+                WideBlueButton(name: "Подтвердить", buttonState: $buttonState) {
+                    handleWideBlueButtonTap()
+                }
+                .padding(.horizontal, 16)
+                .onChange(of: digits) { newValue in
+                    if newValue.allSatisfy({ !$0.isEmpty }) {
+                        buttonState = .normal
+                    } else {
+                        buttonState = .disabled
                     }
                 }
             }
         }
         .ignoresSafeArea(edges: .top)
         .background(Color.Basic.black)
-        
-        .alert(isPresented: $showTriedLimitWarningAlert) {
+        // presenters
+        .alert(isPresented: $showWarningAlert) {
             Alert(
                 title: Text("Ошибка авторизации"),
                 message: Text("Код не верный"),
@@ -58,43 +57,29 @@ struct CodeFieldScreenView: View {
             )
         }
         .fullScreenCover(isPresented: $shouldShowTabBarView) {
-      
-                        TabBarView(viewModel: viewModel, user: currentUser)
+            TabBarView(viewModel: viewModel, user: currentUser)
         }
     }
+    /// Handles the tap action on the wide blue button.
+    ///
+    /// Checks the entered code for 4 digits and, if the condition is met, sets the password in ViewModel and checks its correctness asynchronously. After checking, it displays either a tab bar or an error warning
     private func handleWideBlueButtonTap() {
         let enteredCode = digits.joined()
         if enteredCode.count == 4 {
             viewModel.password = enteredCode
             viewModel
                 .checkPassword { success, error in
-                switch (success, error) {
-                case (true, nil):
-                    viewModel
-                        .createUser { user, error in
-                        if let user = user {
-                        self.currentUser.email = user.email
-                        self.currentUser.password = user.password
-                            
+                    switch (success, error) {
+                    case (true, nil):
                         shouldShowTabBarView = true
-                        } else if let error = error {
-                            print("Error creating user: \(error.localizedDescription)")
-                            showTriedLimitWarningAlert = true
-                        }
+                    case (false, let error?):
+                        print("Error during password check: \(error.localizedDescription)")
+                        showWarningAlert = true
+                    default:
+                        print("Password check failed")
+                        showWarningAlert = true
                     }
-                case (false, let error?):
-                    print("Error during password check: \(error.localizedDescription)")
-                    showTriedLimitWarningAlert = true
-                default:
-                    print("Password check failed")
-                    showTriedLimitWarningAlert = true
                 }
-            }
         }
     }
-}
-
-
-#Preview {
-    CodeFieldScreenView(viewModel: LoginViewModel(), currentUser: UserModel(email: "example@mail.ru", password: "1111"))
 }

@@ -8,32 +8,36 @@
 import SwiftUI
 
 struct MainScreenView: View {
+    //MARK: - Properties
     @ObservedObject var viewModel = MainViewModel()
-    @State private var selectedVacancy: VacancyModel? // Добавляем состояние для отслеживания выбранной вакансии
-    
+    @State private var selectedVacancyId: String?
+    //MARK: -  body
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 VStack(alignment: .leading) {
                     Spacer().frame(height: geometry.size.height * 0.07)
+                    // search bar
                     CustomSearchBar().padding(.horizontal)
                     Spacer().frame(height: 16)
+                    // stories header
                     MainStoriesHeaderView()
                     Text("Вакансии для вас")
                         .font(.semibold(size: 20))
                         .foregroundColor(.white)
                         .padding(.leading, 16)
-                    
+                    // scroll view
                     ScrollView {
                         VStack(spacing: 10) {
-                            ForEach(viewModel.items) { vacancy in
-                                // Используем NavigationLink для перехода к DiscriptionView
-                                NavigationLink(destination: DescriptionScreenView(viewModel: DescriptionViewModel(vacancy: vacancy)), tag: vacancy, selection: $selectedVacancy) {
-                                    ChortDescriptionCardView(vacancy: vacancy)
+                            ForEach(viewModel.items, id: \.id) { vacancy in
+                                
+                                NavigationLink(destination: DescriptionScreenView(viewModel: DescriptionViewModel(vacancy: vacancy)), tag: vacancy.id, selection: $selectedVacancyId) {
+                                    // links
+                                    ChortDescriptionCardView(viewModel: ChortDescriptionCardViewModel(vacancy: vacancy))
                                         .frame(width: geometry.size.width - 20, height: 233)
                                         .padding(.horizontal, 10)
                                         .onTapGesture {
-                                            selectedVacancy = vacancy
+                                            selectedVacancyId = vacancy.id
                                         }
                                 }
                                 .buttonStyle(PlainButtonStyle())
@@ -49,10 +53,5 @@ struct MainScreenView: View {
             }
         }
     }
-}
-
-
-#Preview {
-    MainScreenView()
 }
 

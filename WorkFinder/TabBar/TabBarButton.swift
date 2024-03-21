@@ -8,17 +8,16 @@
 import SwiftUI
 
 public struct TabBarButton: View {
-    /// text value
+    /// text values
     let imageName: String
     let title: String
     /// flag
     let isSelected: Bool
     /// button action
     let action: () -> Void
-    
+    //MARK: - body
     public var body: some View {
         Button(action: action) {
-           
             VStack(spacing: 2) {
                 Image(imageName)
                     .renderingMode(.template)
@@ -36,7 +35,7 @@ public struct TabBarButton: View {
 }
 
 #Preview {
-   VStack {
+    VStack {
         TabBarButton(imageName: "star", title: "star", isSelected: true) {
             print("tap TabBarButton")
         }

@@ -7,42 +7,41 @@
 
 import SwiftUI
 
-public struct ChortDescriptionCardView: View {
-    /// properties
-    let vacancy: VacancyModel
+struct ChortDescriptionCardView: View {
+    //MARK: - Properties
+    let viewModel: ChortDescriptionCardViewModel
     /// states
     @State private var isFavorite: Bool
     @State private var isCardTapped = false
     //MARK: -  init
-    init(vacancy: VacancyModel) {
-        self.vacancy = vacancy
-        _isFavorite = State(initialValue: vacancy.isFavorite)
+    init(viewModel: ChortDescriptionCardViewModel) {
+        self.viewModel = viewModel
+        _isFavorite = State(initialValue: viewModel.vacancy.isFavorite)
     }
     //MARK: - body
     public var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 10) {
-                if let lookingNumber = vacancy.lookingNumber {
+                if let number = viewModel.lookingNumber {
                     HStack {
-                        let formattedLookingNumber = "\(lookingNumber)".formatLookingNumber()
-                        Regular14TextField(text: formattedLookingNumber, color: Color.Special.green)
+                        Regular14TextField(text: number, color: Color.Special.green)
                     }
                 }
-                Text("\(vacancy.title)")
+                Text("\(viewModel.vacancy.title)")
                     .font(.medium(size: 16))
                     .foregroundColor(.white)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Regular14TextField(text: "\(vacancy.address.town), \(vacancy.address.street), \(vacancy.address.house)")
+                    Regular14TextField(text: "\(viewModel.vacancy.address.town), \(viewModel.vacancy.address.street), \(viewModel.vacancy.address.house)")
                     
                     HStack(spacing: 8) {
-                        Regular14TextField(text: vacancy.company)
+                        Regular14TextField(text: viewModel.vacancy.company)
                         Image("check_mark")
                     }
                 }
                 HStack(spacing: 8) {
                     Image("experience")
-                    Regular14TextField(text: vacancy.experience.previewText)
+                    Regular14TextField(text: viewModel.vacancy.experience.previewText)
                 }
                 Regular14TextField(text: formattedPublishedDate())
                 WideThinButton(name: "Откликнуться") {
@@ -57,9 +56,10 @@ public struct ChortDescriptionCardView: View {
                         isCardTapped = true
                     }
             }
-            .padding(.top, vacancy.lookingNumber != nil ? 0 : 16)
+            .padding(.top, viewModel.vacancy.lookingNumber != nil ? 0 : 16)
             .padding()
-            .frame(width: geometry.size.width, height: 233)            .background(Color.Basic.gray1)
+            .frame(width: geometry.size.width, height: 233)          
+            .background(Color.Basic.gray1)
             .cornerRadius(10)
             .shadow(radius: 5)
             
@@ -69,6 +69,7 @@ public struct ChortDescriptionCardView: View {
                                   width: 24, height: 24, isOn: isFavorite,
                                   imageFill: "fill_heart", color: Color.Basic.gray4,  action: {
                     isFavorite.toggle()
+                    viewModel.toggleFavorite()
                 })
                 
                 .padding(.top, 16)
@@ -86,7 +87,7 @@ public struct ChortDescriptionCardView: View {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale =  Locale(identifier: "ru_RU")
         
-        if let date = dateFormatter.date(from: vacancy.publishedDate) {
+        if let date = dateFormatter.date(from: viewModel.vacancy.publishedDate) {
             dateFormatter.dateFormat = "d MMMM"
             let formattedDate = dateFormatter.string(from: date)
             return "Опубликовано \(formattedDate)"
