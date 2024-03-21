@@ -1,6 +1,11 @@
 
 # WorkFinder_SwiftUI
+## Авторы
+- [AliaksandraMakey](https://github.com/AliaksandraMakey)
 
+## Видеопрезентация
+
+[WorkFinder Video Presentation](https://www.youtube.com/watch?v=eqwEGnxrDdE)
 Проект WorkFinder написан на SwiftUI с применением паттерна MVVM. 
 В нем используется библиотека Alamofire для выполнения запросов к API. 
 
@@ -39,8 +44,3 @@
 ## Важно
 
 - Перед началом разработки новой функциональности рекомендуется обновить ветку Developer до актуальной версии с помощью `git pull origin developer`.
-
-## Авторы
-- [AliaksandraMakey](https://github.com/AliaksandraMakey)
-
-
