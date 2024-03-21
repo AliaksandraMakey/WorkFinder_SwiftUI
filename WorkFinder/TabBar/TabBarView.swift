@@ -8,30 +8,40 @@
 import SwiftUI
 
 struct TabBarView: View {
+    //MARK: - Properties
     @ObservedObject var coordinator = TabBarCoordinator()
     @ObservedObject var viewModel = LoginViewModel()
-    var user: UserModel?
-    
+    var user: UserModel
+    //MARK: - body
     var body: some View {
-        TabView(selection: $coordinator.currentTab) {
-            ForEach(TabBarCoordinator.Tab.allCases, id: \.self) { tab in
-                getView(for: tab)
-                    .tabItem {
-                        Label(tab.tabBarTitle, systemImage: tab.systemImageName)
-                    }
-                    .tag(tab)
+        ZStack {
+            contentView(for: coordinator.currentTab)
+            VStack {
+                Spacer()
+                VStack(alignment: .center, spacing: 6) {
+                    Divider().background(Color.Basic.gray4)
+                    HStack(spacing: 36) {
+                        ForEach(TabBarCoordinator.Tab.allCases, id: \.self) { tab in
+                            TabBarButton(imageName: tab.imageName, title: tab.tabBarTitle, isSelected: coordinator.currentTab == tab) {
+                                coordinator.currentTab = tab
+                            }
+                        }
+                    }   .padding(.bottom)
+                }
+                .background(Color.Basic.black)
             }
         }
+        .edgesIgnoringSafeArea(.bottom)
         .environmentObject(coordinator)
     }
-    
-    func getView(for tab: TabBarCoordinator.Tab) -> some View {
+    //MARK: - Presenters
+    func contentView(for tab: TabBarCoordinator.Tab) -> some View {
         switch tab {
         case .search:
-            return AnyView(SearchView())
+            return AnyView(MainScreenView())
         case .favorites:
-            if user != nil {
-                return AnyView(FavoritesScreenView(user: user!))
+            if UserModel.shared.email == user.email {
+                return AnyView(FavoritesScreenView(user: user))
             } else {
                 return AnyView(LoginScreenView(viewModel: viewModel))
             }
@@ -44,5 +54,4 @@ struct TabBarView: View {
         }
     }
 }
-
 

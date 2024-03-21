@@ -7,14 +7,15 @@
 
 import Foundation
 
+
 enum InfoProperties {
     case noNetwork
     
+    //MARK: - Properties
     var warmingText: String {
         switch self {
-            
         case .noNetwork:
-            return "Нет интернета"
+            return "Что-то пошло не так. \nПроверьте подключение к интернету и обновите страницу"
         }
     }
     var image: String {
@@ -23,11 +24,10 @@ enum InfoProperties {
             return "bad_connection"
         }
     }
-    var buttonText: String {
+    var buttonName: String {
         switch self {
-            
         case .noNetwork:
-            return "Нет интернета"
+            return "Обновить страницу"
         }
     }
 }

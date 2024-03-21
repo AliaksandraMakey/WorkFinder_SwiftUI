@@ -7,16 +7,22 @@
 
 import Alamofire
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+#warning ("TODO: Вынести все Error и обработать ошибки. Вынести текстовые значения в отдельную сущность и добавить локализацию.")
+    //MARK: - Properties
     @State private var hasInternetConnection = true
     @State var mistake = InfoProperties.noNetwork
+    //MARK: -  body
     var body: some View {
         VStack {
             if hasInternetConnection {
-                TabBarView()
+                TabBarView(user: UserModel(id: "", email: "", password: ""))
             } else {
-                InfoView(warmingText: mistake.warmingText, image: mistake.image, buttonText: mistake.buttonText)
+                InfoView(warmingText: mistake.warmingText, 
+                         image: mistake.image,
+                         buttonName: mistake.buttonName)
             }
         }
         .onAppear(perform: checkInternetConnection)

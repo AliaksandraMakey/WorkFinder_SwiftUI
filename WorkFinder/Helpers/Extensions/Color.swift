@@ -18,11 +18,11 @@ extension Color {
    
    enum Basic {
        static let black = Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-       static let grey1 = Color(#colorLiteral(red: 0.1333333333, green: 0.137254902, blue: 0.1450980392, alpha: 1))
-       static let grey2 = Color(#colorLiteral(red: 0.1921568627, green: 0.1960784314, blue: 0.2039215686, alpha: 1))
-       static let grey3 = Color(#colorLiteral(red: 0.5215686275, green: 0.5254901961, blue: 0.5333333333, alpha: 1))
-       static let grey4 = Color(#colorLiteral(red: 0.6235294118, green: 0.6235294118, blue: 0.6235294118, alpha: 1))
-       static let grey5 = Color(#colorLiteral(red: 0.8588235294, green: 0.8588235294, blue: 0.8588235294, alpha: 1))
+       static let gray1 = Color(#colorLiteral(red: 0.1333333333, green: 0.137254902, blue: 0.1450980392, alpha: 1))
+       static let gray2 = Color(#colorLiteral(red: 0.1921568627, green: 0.1960784314, blue: 0.2039215686, alpha: 1))
+       static let gray3 = Color(#colorLiteral(red: 0.5215686275, green: 0.5254901961, blue: 0.5333333333, alpha: 1))
+       static let gray4 = Color(#colorLiteral(red: 0.6235294118, green: 0.6235294118, blue: 0.6235294118, alpha: 1))
+       static let gray5 = Color(#colorLiteral(red: 0.8588235294, green: 0.8588235294, blue: 0.8588235294, alpha: 1))
        static let white = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
    }
    

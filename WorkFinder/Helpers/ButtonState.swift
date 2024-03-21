@@ -10,4 +10,3 @@ import Foundation
 enum ButtonState {
     case normal,  disabled
 }
-
