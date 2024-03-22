@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DescriptionScreenView: View {
     //MARK: - Properties
+    
     @ObservedObject var viewModel: DescriptionViewModel
     @Environment(\.presentationMode) var presentationMode
     //MARK: - body
